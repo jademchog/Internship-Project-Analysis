@@ -1,6 +1,7 @@
 <template>
   <h1>Hello WORLD!!!</h1>
   <p>This should contain a message: {{ message }} </p>
+  <i-eat-planes/>
 </template>
 
 
