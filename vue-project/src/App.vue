@@ -1,12 +1,14 @@
 <template>
   <h1>Hello WORLD!!!</h1>
   <p>This should contain a message: {{ message }} </p>
-  <i-eat-planes/>
-  <i-eat-planes/>
-  <i-eat-planes/>
-  <i-eat-planes/>
-  <i-eat-planes/>
-  <i-eat-planes/>
+  <div class="cat-boxes">
+    <i-eat-planes/>
+    <i-eat-planes/>
+    <i-eat-planes/>
+    <i-eat-planes/>
+    <i-eat-planes/>
+    <i-eat-planes/>
+  </div>
 </template>
 
 
@@ -22,5 +24,8 @@ export default {
 
 
 <style>
-
+.cat-boxes{
+  display: flex;
+  flex-wrap: wrap;
+}
 </style>
