@@ -1,7 +1,7 @@
 <template>
     <div class="box">
         <p class="text"><strong><em>I am a plane eater</em></strong></p>
-        <img :src="plane" height="100px" width="100px" class="image"></img>
+        <img :src="plane" height="100px" width="100px" class="image" />
     </div>
 </template>
 
