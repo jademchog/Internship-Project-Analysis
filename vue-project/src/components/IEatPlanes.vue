@@ -1,7 +1,7 @@
 <template>
     <div class="box">
         <p class="text"><strong><em>I am a plane eater</em></strong></p>
-        <img :src="plane" height="100px" width="100px" class="image"></img>
+        <img :src="plane" height="100px" width="100px" class="image" />
     </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
             plane: cat
         }
     }
-}
+};
 </script>
 
 
@@ -22,7 +22,7 @@ export default {
 .box {
     border: 3px solid green;
     margin: 10px;
-    width: 150px
+    width: 150px;
 }
 
 .image{
