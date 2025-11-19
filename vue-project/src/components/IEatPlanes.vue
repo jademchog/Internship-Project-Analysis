@@ -14,7 +14,7 @@ export default {
             plane: cat
         }
     }
-}
+};
 </script>
 
 
@@ -22,7 +22,7 @@ export default {
 .box {
     border: 3px solid green;
     margin: 10px;
-    width: 150px
+    width: 150px;
 }
 
 .image{
