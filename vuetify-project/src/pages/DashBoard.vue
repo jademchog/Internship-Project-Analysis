@@ -1,21 +1,18 @@
 <template>
-    <v-container>
-        <v-row>
-            <v-col>
-                <v-card variant="tonal" class="card">i eat food</v-card>
-            </v-col>
-            <v-col>
-                <v-card variant="tonal" class="card">me too</v-card>
-            </v-col>
-        </v-row>
-        <v-row>
-            <v-col>
-                <v-card>
-                    <div ref="chartRef2" style="width: 100%; height: 400px"></div>
-                </v-card>
-            </v-col>
-        </v-row>
-    </v-container>
+  <v-app>
+    <v-row>
+        <v-col>
+            <v-card variant="tonal" class="card" link href="food" title="i'm eat food">
+              <v-card link href="food">
+                <v-icon>mdi-eye</v-icon>
+              </v-card>
+            </v-card>
+        </v-col>
+        <v-col>
+            <v-card variant="tonal" class="card">me too</v-card>
+        </v-col>
+    </v-row>
+  </v-app>
 </template>
 
 <script setup lang = "ts">
