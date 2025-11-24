@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import meowSound from '@/assets/meow.wav'
+import meowSound from "@/assets/meow.wav"
 
 const meow = new Audio(meowSound)
 
