@@ -1,9 +1,14 @@
 <template>
-  <v-app>
-    <router-view />
-  </v-app>
+  <Dashboard />
 </template>
 
-<script setup>
-  //
+<script>
+import Dashboard from "./pages/Dashboard.vue"
+
+export default {
+    name: 'App',
+    components: {
+        Dashboard
+    }
+}
 </script>
