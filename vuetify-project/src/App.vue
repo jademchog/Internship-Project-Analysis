@@ -1,14 +1,14 @@
 <template>
-<dashboard />
+  <Dashboard />
 </template>
 
 <script>
-import DashBoard from "./pages/DashBoard.vue"
+import Dashboard from "./pages/Dashboard.vue"
 
 export default {
     name: 'App',
     components: {
-        DashBoard
+        Dashboard
     }
 }
 </script>
