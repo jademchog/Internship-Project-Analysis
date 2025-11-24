@@ -3,7 +3,7 @@
         <v-app-bar color = "#173F5F" rounded>
             <v-app-bar-title>Application Bar</v-app-bar-title>
         </v-app-bar>
-        <v-navigation-drawer app permanent>
+        <v-navigation-drawer app permanent expand-on-hover rail>
             <v-list>
                 <v-list-item
                 v-for="item in menuItems"
@@ -12,6 +12,8 @@
                 link
                 :active="isActive(item.to)"
                 @click="navigate(item.to)"
+
+                prepend-avatar="./assets/carhere.jpg"
                 >
                     <v-list-item-title>{{ item.title }}</v-list-item-title>
                 </v-list-item>
