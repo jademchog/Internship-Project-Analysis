@@ -2,7 +2,11 @@
   <v-app>
     <v-row>
         <v-col>
-            <v-card variant="tonal" class="card">i eat food</v-card>
+            <v-card variant="tonal" class="card" link href="food" title="i'm eat food">
+              <v-card link href="food">
+                <v-icon>mdi-eye</v-icon>
+              </v-card>
+            </v-card>
         </v-col>
         <v-col>
             <v-card variant="tonal" class="card">me too</v-card>
