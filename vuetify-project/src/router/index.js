@@ -6,12 +6,30 @@
 
 // Composables
 import { createRouter, createWebHistory } from 'vue-router'
-import { setupLayouts } from 'virtual:generated-layouts'
-import { routes } from 'vue-router/auto-routes'
+
+const DashboardLayout = () => import('@/LayoutView.vue')
+const Dashboard = () => import('@/pages/DashBoard.vue')
+const Page1 = () => import('@/pages/Page1.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: setupLayouts(routes),
+  routes: [
+    {
+      path: '/',
+      component: DashboardLayout,
+      redirect: '/dashboard',
+      children: [
+        {
+          path: 'dashboard',
+          component: Dashboard,
+        },
+        {
+          path: 'page1',
+          component: Page1,
+        }
+      ],
+    },
+  ],
 })
 
 // Workaround for https://github.com/vitejs/vite/issues/11804
