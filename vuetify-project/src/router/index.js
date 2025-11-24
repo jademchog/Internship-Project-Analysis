@@ -8,8 +8,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 const DashboardLayout = () => import('@/LayoutView.vue')
+const HomePage = () => import('@/pages/Home.vue')
 const Dashboard = () => import('@/pages/DashBoard.vue')
-const Page1 = () => import('@/pages/Page1.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,16 +17,16 @@ const router = createRouter({
     {
       path: '/',
       component: DashboardLayout,
-      redirect: '/dashboard',
+      redirect: '/home',
       children: [
+        {
+          path: 'home',
+          component: HomePage,
+        },
         {
           path: 'dashboard',
           component: Dashboard,
         },
-        {
-          path: 'page1',
-          component: Page1,
-        }
       ],
     },
   ],

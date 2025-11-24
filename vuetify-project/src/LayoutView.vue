@@ -1,6 +1,6 @@
 <template>
     <v-app>
-        <v-app-bar :elevation="0" rounded>
+        <v-app-bar color = "#173F5F" rounded>
             <v-app-bar-title>Application Bar</v-app-bar-title>
         </v-app-bar>
         <v-navigation-drawer app permanent>
@@ -30,8 +30,8 @@ const router = useRouter()
 const route = useRoute()
 
 const menuItems = [
-  { title: 'Dashboard', to: '/dashboard' },
-  { title: 'Page1', to: '/page1'}
+  { title: 'Home', to: '/home' },
+  { title: 'Dashboard', to: '/dashboard'}
 ]
 
 function navigate(to: string) {
