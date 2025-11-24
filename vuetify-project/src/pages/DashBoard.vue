@@ -63,3 +63,12 @@ onMounted(() => {
   }
 })
 </script>
+
+<style>
+.card {
+  margin: auto;
+  width: 50%;
+  height: 20%;
+  display: flex;
+}
+</style>
