@@ -10,6 +10,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 const DashboardLayout = () => import('@/LayoutView.vue')
 const HomePage = () => import('@/pages/Home.vue')
 const Dashboard = () => import('@/pages/DashBoard.vue')
+const Food = () => import('@/pages/Food.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,10 @@ const router = createRouter({
         {
           path: 'dashboard',
           component: Dashboard,
+        },
+        {
+          path: 'food',
+          component: Food,
         },
       ],
     },

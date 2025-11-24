@@ -1,22 +1,24 @@
 <template>
-    <v-container>
+    <v-container class="pg-bg">
         <v-row>
             <v-col>
-                <v-card text="hi" variant="tonal">
-
+                <v-card title="graph" subtitle="a graph of smt against smt">
+                    <v-card variant="tonal">
+                    <div ref="chartRef1" style="width: 100%; height: 400px"></div>
+                    </v-card>
                 </v-card>
             </v-col>
             <v-col>
-                <v-card text="hello" variant="tonal">
-
+                <v-card title="graph" subtitle="a graph of smt against smt">
+                    <v-card variant="tonal">
+                    <div ref="chartRef1" style="width: 100%; height: 400px"></div>
+                    </v-card>
                 </v-card>
             </v-col>
         </v-row>
         <v-row>
             <v-col>
-                <v-card>
-                    <div ref="chartRef1" style="width: 100%; height: 400px"></div>
-                </v-card>
+                
             </v-col>
         </v-row>
     </v-container>
@@ -52,3 +54,13 @@ onMounted(() => {
 })
 
 </script>
+
+<style>
+.pg-bg {
+  background-image: url("../assets/carhere.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  min-width: 180vh;
+}
+</style>
