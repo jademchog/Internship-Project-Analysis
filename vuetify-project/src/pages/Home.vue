@@ -21,7 +21,7 @@
               <MenuItemDashboard />
             </v-col>
             <v-col>
-              <MenuItemDashboard />
+              <MenuItemFood />
             </v-col>
           </v-row>
         </v-card>
