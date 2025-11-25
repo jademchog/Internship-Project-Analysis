@@ -16,6 +16,9 @@ declare module 'vue' {
     MenuItem: typeof import('./src/components/MenuItem.vue')['default']
     MenuItemDashboard: typeof import('./src/components/MenuItemDashboard.vue')['default']
     MenuItemFood: typeof import('./src/components/MenuItemFood.vue')['default']
+    MenuItemGraphs: typeof import('./src/components/MenuItemGraphs.vue')['default']
+    MenuItemsTable: typeof import('./src/components/MenuItemsTable.vue')['default']
+    MenuItemTable: typeof import('./src/components/MenuItemTable.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

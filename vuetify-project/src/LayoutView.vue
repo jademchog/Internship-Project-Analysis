@@ -1,6 +1,6 @@
 <template>
     <v-app>
-        <v-app-bar color = "#173F5F" rounded>
+        <v-app-bar rounded>
             <v-app-bar-title>Application Bar</v-app-bar-title>
         </v-app-bar>
         <v-navigation-drawer app permanent expand-on-hover rail>
@@ -17,6 +17,7 @@
                 >
                     <v-list-item-title><h3>{{ item.title }}</h3></v-list-item-title>
                 </v-list-item>
+                <v-divider></v-divider>
             </v-list>
         </v-navigation-drawer>
         <v-main>
@@ -35,7 +36,8 @@ const menuItems = [
   { title: 'Home', to: '/home' },
   { title: 'Dashboard', to: '/dashboard'},
   { title: 'Food', to: '/food'},
-  { title: 'Graphs', to: '/graphs'}
+  { title: 'Graphs', to: '/graphs'},
+  { title: 'Data Table', to: '/table'}
 ]
 
 function navigate(to: string) {

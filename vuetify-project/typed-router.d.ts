@@ -19,6 +19,7 @@ declare module 'vue-router/auto-routes' {
    */
   export interface RouteNamedMap {
     '/DashBoard': RouteRecordInfo<'/DashBoard', '/DashBoard', Record<never, never>, Record<never, never>>,
+    '/DataTable': RouteRecordInfo<'/DataTable', '/DataTable', Record<never, never>, Record<never, never>>,
     '/Food': RouteRecordInfo<'/Food', '/Food', Record<never, never>, Record<never, never>>,
     '/Graphs': RouteRecordInfo<'/Graphs', '/Graphs', Record<never, never>, Record<never, never>>,
     '/Home': RouteRecordInfo<'/Home', '/Home', Record<never, never>, Record<never, never>>,
@@ -37,6 +38,10 @@ declare module 'vue-router/auto-routes' {
   export interface _RouteFileInfoMap {
     'src/pages/DashBoard.vue': {
       routes: '/DashBoard'
+      views: never
+    }
+    'src/pages/DataTable.vue': {
+      routes: '/DataTable'
       views: never
     }
     'src/pages/Food.vue': {
