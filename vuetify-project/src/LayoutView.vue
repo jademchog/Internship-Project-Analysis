@@ -34,7 +34,8 @@ const route = useRoute()
 const menuItems = [
   { title: 'Home', to: '/home' },
   { title: 'Dashboard', to: '/dashboard'},
-  { title: 'Food', to: '/food'}
+  { title: 'Food', to: '/food'},
+  { title: 'Graphs', to: '/graphs'}
 ]
 
 function navigate(to: string) {
