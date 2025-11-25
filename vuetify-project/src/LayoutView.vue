@@ -12,10 +12,10 @@
                 link
                 :active="isActive(item.to)"
                 @click="navigate(item.to)"
-
+                style="height: 10vh;"
                 prepend-avatar="./assets/carhere.jpg"
                 >
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                    <v-list-item-title><h3>{{ item.title }}</h3></v-list-item-title>
                 </v-list-item>
             </v-list>
         </v-navigation-drawer>
