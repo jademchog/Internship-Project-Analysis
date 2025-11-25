@@ -4,5 +4,6 @@
     subtitle="Click here to view graphs"
     append-icon="mdi-chart-box-multiple"
     link
-    to="/graphs"></v-card>
+    to="/graphs"
+    variant="tonal"></v-card>
 </template>
