@@ -17,11 +17,6 @@
                 </v-card>
             </v-col>
         </v-row>
-        <v-row>
-            <v-col>
-                
-            </v-col>
-        </v-row>
     </v-container>
   </v-app>
 </template>
