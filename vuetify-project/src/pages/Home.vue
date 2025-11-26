@@ -7,7 +7,11 @@
             <h1>Home</h1>
           </v-card>
         </v-row>
-        <v-card title="Menu Items" subtitle="Navigate pages here or using the sidebar" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum">
+        <v-card 
+        title="Menu Items" 
+        subtitle="Navigate pages here or using the sidebar" 
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+        min-height="50vh">
           <v-row>
             <v-col>
               <MenuItemDashboard />
@@ -34,10 +38,6 @@
 </template>
 
 <script setup lang="ts">
-import axios from "axios"
-
-axios.get("http://localhost:8081/api/v1/graduate-employment?university=Nanyang Technological University&year=2023")
-      .then(res => console.log(res.data))
 </script>
 
 <style>

@@ -21,5 +21,6 @@ declare module 'vue' {
     MenuItemTable: typeof import('./src/components/MenuItemTable.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Table: typeof import('./src/components/Table.vue')['default']
   }
 }

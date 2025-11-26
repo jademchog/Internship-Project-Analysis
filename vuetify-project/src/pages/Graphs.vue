@@ -18,7 +18,6 @@
             </div>
         </div>
     </v-container>
-    <p v-for="item in data">{{ item }}</p>
 </template>
 <style>
 .chart {
@@ -40,10 +39,11 @@
 .item3 { grid-column: 1; grid-row: 2; }
 .item4 { grid-column: 2; grid-row: 2; }
 </style>
-<script setup lang = "ts">
-import axios from "axios"
 
-const data = ref([])
+
+
+<script setup lang = "ts">
+
 
 
 
@@ -60,8 +60,6 @@ const chartRef4 = ref<HTMLDivElement | null>(null)
 let chartInstance4: echarts.ECharts | null = null
 
 onMounted(() => {
-    axios.get("http://localhost:8081/api/v1/graduate-employment?university=Nanyang Technological University&year=2023")
-    .then(res => {data.value = res.data.data})
 
     if (chartRef1.value) {
         chartInstance1 = echarts.init(chartRef1.value)
