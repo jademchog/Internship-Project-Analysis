@@ -1,30 +1,26 @@
 <template>
-  <v-data-table-virtual
+  <v-data-table
+    :headers="headers"
     :items="items"
-    height="400"
-    item-value="name"
+    height="80vh"
+    :items-per-page="10"
     fixed-header
-  >
-    <template #header>
-      <tr>
-        <th>Name</th>
-        <th>Value</th>
-      </tr>
-    </template>
-
-    <template #item="{ item }">
-      <tr>
-        <td>{{ item.name }}</td>
-        <td>{{ item.value }}</td>
-      </tr>
-    </template>
-  </v-data-table-virtual>
+  ></v-data-table>
 </template>
 
 <script setup>
-const items = [
-  { name: 'Alice', value: 10 },
-  { name: 'Bob', value: 20 },
-  { name: 'Charlie', value: 30 },
-]
+import { ref } from 'vue'
+import axios from 'axios'
+
+const headers = ref([
+  { text: 'School', value: 'school' },
+  { text: 'Employment Rate', value: 'employment_rate_overall' }
+])
+const items = ref([])
+
+axios.get("http://localhost:8081/api/v1/graduate-employment?university=Nanyang Technological University&year=2023")
+  .then(res => {
+    console.log(res.data) // check the structure
+    items.value = res.data.data || []
+  })
 </script>

@@ -4,7 +4,8 @@
     subtitle="Click here to view the dashboard"
     append-icon="mdi-chart-line"
     link
-    to="/dashboard"></v-card>
+    to="/dashboard"
+    variant="tonal"></v-card>
 </template>
 
 <script>

@@ -4,5 +4,6 @@
     subtitle="Cat. Eat. Food."
     append-icon="mdi-cat"
     link
-    to="/food"></v-card>
+    to="/food"
+    variant="tonal"></v-card>
 </template>
