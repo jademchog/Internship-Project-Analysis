@@ -34,6 +34,10 @@
 </template>
 
 <script setup lang="ts">
+import axios from "axios"
+
+axios.get("http://localhost:8081/api/v1/graduate-employment?university=Nanyang Technological University&year=2023")
+      .then(res => console.log(res.data))
 </script>
 
 <style>
