@@ -1,22 +1,22 @@
 <template>
   <v-app>
-        <v-container class="pg-bg">
-        <v-row>
-            <v-col>
-                <v-card title="graph" subtitle="a graph of smt against smt">
-                    <v-card variant="tonal">
-                    <div ref="chartRef1" style="width: 100%; height: 400px"></div>
-                    </v-card>
-                </v-card>
-            </v-col>
-            <v-col>
-                <v-card title="graph" subtitle="a graph of smt against smt">
-                    <v-card variant="tonal">
-                    <div ref="chartRef2" style="width: 100%; height: 400px"></div>
-                    </v-card>
-                </v-card>
-            </v-col>
-        </v-row>
+    <v-container class="pg-bg">
+      <v-row>
+          <v-col>
+              <v-card title="graph" subtitle="a graph of smt against smt">
+                  <v-card variant="tonal">
+                  <div ref="chartRef1" style="width: 100%; height: 400px"></div>
+                  </v-card>
+              </v-card>
+          </v-col>
+          <v-col>
+              <v-card title="graph" subtitle="a graph of smt against smt">
+                  <v-card variant="tonal">
+                  <div ref="chartRef2" style="width: 100%; height: 400px"></div>
+                  </v-card>
+              </v-card>
+          </v-col>
+      </v-row>
     </v-container>
   </v-app>
 </template>
