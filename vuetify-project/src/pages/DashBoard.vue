@@ -17,11 +17,42 @@
               </v-card>
           </v-col>
       </v-row>
+      <v-card 
+    class="my-4" 
+    title="Query the Database" 
+    subtitle="The table will display according to the University Name and Degree"
+    min-height="30%">
+      <v-row>
+        <v-col>
+          <v-text-field
+          label="University Name"
+          :model-value="university"
+          @update:model-value="university = $event"
+          ></v-text-field>
+        </v-col>
+        <v-col>
+          <v-text-field
+          label="Degree"
+          :model-value="degree"
+          @update:model-value="degree = $event"
+          ></v-text-field>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-btn
+        class="search"
+        variant="tonal"
+        @click="querydb"
+        >Search</v-btn>
+      </v-row>
+    </v-card>
     </v-container>
   </v-app>
+  <p>{{ items }}</p>
 </template>
 
 <script setup lang = "ts">
+import axios from 'axios'
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import * as echarts from 'echarts'
 
@@ -30,21 +61,51 @@ let chartInstance1: echarts.ECharts | null = null
 const chartRef2 = ref<HTMLDivElement | null>(null)
 let chartInstance2: echarts.ECharts | null = null
 
+//user inputs
+const university = ref("")
+const degree = ref("")
+
+//outputs
+const items = ref([])
+const years = ref([])
+const employment_rates = ref([])
+
+function querydb() {
+  axios.get(`http://localhost:8081/api/v1/degree-employment?university=${university.value}&degree=${degree.value}`)
+    .then(res => {
+      items.value = res.data.data || [];
+      years.value = items.value.map(item => item.year);
+      employment_rates.value = items.value.map(item => item.employment_rate_overall);
+
+      // update chart
+      if (chartInstance1) {
+        chartInstance1.setOption({
+          xAxis: { data: years.value },
+          series: [{ data: employment_rates.value }]
+        });
+      }
+    });
+}
+
+
 onMounted(() => {
   if (chartRef1.value) {
     chartInstance1 = echarts.init(chartRef1.value)
     chartInstance1.setOption({
-      title: { text: 'graph' },
+      title: { text: 'Employment' },
       tooltip: {},
       xAxis: {
-        data: ['A', 'B', 'C', 'D', 'E', 'F'],
+        data: years.value,
       },
-      yAxis: {},
+      yAxis: {
+        min: 60,
+        max:100
+      },
       series: [
         {
           name: 'number',
           type: 'line',
-          data: [67, 267, 367, 677, 767, 567],
+          data: employment_rates.value,
         },
       ],
     })
@@ -105,5 +166,12 @@ onMounted(() => {
   background-position: center;
   min-height: 100vh;
   min-width: 180vh;
+}
+
+.search {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
